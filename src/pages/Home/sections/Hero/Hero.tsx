@@ -1,12 +1,13 @@
-import { Button, Container, Grid, styled, Typography } from "@mui/material"
+import {Container, Grid, styled, Typography } from "@mui/material"
 import Avatar from "../../../../assets/images/avatar.jpeg";
 import DownloadIcon from '@mui/icons-material/Download';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import StyledButton from "../../../../components/StyledButton/StyledButton";
 
 const Hero = () => {
 
-  const StyledHero = styled("div")(()=> ({
-    backgroundColor: "black",
+  const StyledHero = styled("div")(({theme})=> ({
+    backgroundColor: theme.palette.primary.contrastText,
     height: "100vh"
   }))
 
@@ -26,19 +27,19 @@ const Hero = () => {
               </Grid>
 
               <Grid item xs={12} md={8}>                
-                <Typography color="primary" variant="h1" textAlign="center">Alexandra Silva</Typography>
-                <Typography color="primary" variant="h2" textAlign="center">I'm a Software Developer</Typography>
+                <Typography color="primary.contrastText" variant="h1" textAlign="center">Alexandra Silva</Typography>
+                <Typography color="primary.contrastText" variant="h2" textAlign="center">I'm a Software Developer</Typography>
                 
                 <Grid container display="flex" justifyContent="center">
                   <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                    <Button>
-                      <DownloadIcon/>Download CV
-                    </Button>
+                    <StyledButton>
+                    <DownloadIcon/>Download CV
+                    </StyledButton>
                   </Grid>
                   <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                    <Button>
+                    <StyledButton>
                       <MailOutlineIcon/>Contant me
-                    </Button>
+                    </StyledButton>
                   </Grid>
                 </Grid>                  
               </Grid>
