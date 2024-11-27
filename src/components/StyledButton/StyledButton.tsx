@@ -24,8 +24,6 @@ const StyledButton: React.FC<StyledButtonProps> = ({ children }) => {
         }
       }))
 
-      //47:01 - 1:06
-
     return (
       <>
         <StyledButton>
